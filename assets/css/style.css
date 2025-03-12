@@ -136,9 +136,18 @@ main {
     padding: 0 20px;
 }
 
-hr {
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
+}
+
+#circle-cover-bg {
+    background: url("../images/reasons-image.webp");
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Makes image a circle */
+    border-radius: 50%;
 }
 
 
