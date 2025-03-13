@@ -88,16 +88,91 @@ nav {
 }
 /* Main Content */
 main {
-  /* Make main element take up any surplus space to push footer down */
+  /* Enlarge main element to push footer down*/
   flex: 1 0 auto;
+  /* Add margin at the top to prevent content from being covered by the header */
   margin-top: 47px;
+  /* Enable flex properties for child elements */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form */
+#signup {
+  background-image: url("../images/signup-image.webp");
+  background-size: cover;
+  background-position: 75%;
+  padding: 20px 10% 0 10%;
+  flex-grow: 1;
+}
+
+#signup-form {
+  color: #ffffff;
+  background-color: rgba(60, 60, 60, 0.6);
+  padding: 30px;
+}
+
+#signup-form > h2 {
+  color: #fafafa;
+  margin-bottom: 20px;
+}
+
+.text-input {
+  background: transparent;
+  color: #fafafa;
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 2px;
+  padding: 0 5px;
+}
+
+.radio-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.join-button {
+  margin-top: 20px;
+  border-radius: 2px;
+  padding: 15px 32px;
+  font-size: 100%;
+  background-color: #454b1b;
+  color: #fafafa;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+  /* Form */
+  #signup {
+    background-position: center;
+    position: relative;
+  }
+
+  #signup-form {
+    max-width: 400px;
+    position: absolute;
+    left: 10%;
+    top: 150px;
+  }
+
+  .text-input:hover {
+    border-color: #f16c6b;
+  }
+
+  .join-button:hover {
+    background-color: #fafafa;
+    color: #454b1b;
+  }
 }
 
 /* Hero Section */
 #hero {
   height: 600px;
   width: 100%;
-  background: url("../images/hero-image.webp") no-repeat center center/cover;
+  background: url(assets\images\signup-image.webp) no-repeat center center/cover;
   position: relative;
 }
 
@@ -216,8 +291,8 @@ hr {
 /* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
   #photos {
-      column-count: 2;
-      column-gap: 0;
+    column-count: 2;
+    column-gap: 0;
   }
 }
 /* Media query: tablets and larger (760px and up) */
@@ -280,12 +355,10 @@ hr {
   }
 
   /* Gallery */
-#photos {
-  column-count: 3;
+  #photos {
+    column-count: 3;
+  }
 }
-}
-
-
 
 /* Large devices (Laptops and Desktops, 992px and up) */
 @media screen and (min-width: 992px) {
@@ -299,32 +372,30 @@ hr {
   }
 }
 
-
-  @media screen and (min-width: 1200px) {
-    /* Reasons section */
-    #benefits {
-      display: flex;
-      flex-direction: row;
-    }
-
-    #benefits > div {
-      flex: 1;
-    }
-
-    #benefits-image {
-      order: 0;
-    }
-
-    #benefits-mental {
-      order: 1;
-    }
-
-    #benefits-mental > div {
-      align-self: flex-start;
-    }
-
-    #benefits-physical > div {
-      align-self: flex-end;
-    }
+@media screen and (min-width: 1200px) {
+  /* Reasons section */
+  #benefits {
+    display: flex;
+    flex-direction: row;
   }
 
+  #benefits > div {
+    flex: 1;
+  }
+
+  #benefits-image {
+    order: 0;
+  }
+
+  #benefits-mental {
+    order: 1;
+  }
+
+  #benefits-mental > div {
+    align-self: flex-start;
+  }
+
+  #benefits-physical > div {
+    align-self: flex-end;
+  }
+}
